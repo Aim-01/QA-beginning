@@ -1,0 +1,99 @@
+1) Посмотреть где я
+pwd
+
+2) Создать папку
+mkdir QA1_training
+
+3) Зайти в папку
+cd QA1_training
+ 
+4) Создать 3 папки
+mkdir folder1 folder2 folder3
+ 
+5) Зайти в любоую папку
+cd folder1
+
+6) Создать 5 файлов (3 txt, 2 json)
+touch Mytalala.txt Myrindindon.txt Lalala.txt 01.json 02.json
+
+7) Создать 3 папки
+mkdir Hehe NotHehe Hihi
+
+8. Вывести список содержимого папки
+ls
+
+ls -la
+
+ls -l
+
+9) + Открыть любой txt файл
+cat Mytalala.txt
+
+10) + написать туда что-нибудь, любой текст.
+ cat >> Mytalala.txt
+ (ENTER)
+my rin-din-don
+and other funny songs
+
+(ENTER)
+
+11) + сохранить и выйти.
+ctrl+c
+
+12) Выйти из папки на уровень выше
+cd ..
+
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+ mv {01.json,02.json} Hehe
+ 
+ mv {01.json,02.json} "C:\Users\User\QA_git\QA1_training\folder1"
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+cp {01.json,02.json} Hihi
+
+cp {Mytalala.txt,Myrindindon.txt} "C:\Users\User\QA_git\QA1_training"
+
+15) Найти файл по имени
+find Mytalala*
+
+find -name "My*"
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+tail -F Myrindindon.txt
+
+вывод результата поиска строками в отдельный файл
+ tail -f Myrindindon.txt | grep "файл" Myrindindon.txt >> 30.txt
+ 
+tail -F Myrindindon.txt | grep --line-buffered 1 | cat >> 30.txt
+
+17) вывести несколько первых строк из текстового файла
+ head -n 7 Myrindindon.txt
+
+18) вывести несколько последних строк из текстового файла
+tail -n 4 Myrindindon.txt
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+less metalala.txt
+для выхода нажать q
+
+20) вывести дату и время
+date
+
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request
+
+curl "http://162.55.220.72:5005/terminal-hw-request"
+ curl "http://162.55.220.72:5005/get_method?name=Aim&age=30"  
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+cd QA1_training && mkdir folder1 folder2 folder3 && cd folder1 && touch Mytalala.txt Myrindindon.txt Lalala.txt 01.json 02.json && mkdir Hehe NotHehe Hihi && ls -la &&  mv {01.json,02.json} "C:\Users\User\QA_git\QA1_training\folder1\NotHehe"
+
+=====================
+1) Посмотреть где я - pwd
+2) Создать папку - mkdir foldername
+3) Зайти в папку - cd foldername
+
