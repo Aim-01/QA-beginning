@@ -95,31 +95,8 @@ git commit -m "adding 2 new files"
 Github -> Repositories -> JSON -> Add fie -> Create new file
 Name your file (bug_report.json)
 {
-"Telegram nickname":"@jenya1234567",
-"Bug_id":"111",
-"Title":"Send Email button return options not related to sending Email",
-"Severity":"Minor",
-"Priority":"Low",
-"Environment":"1)Samsung Galaxy S9+,  Android 10",
-"Precondition":"Installed app on the device",
-"STR":[
-"1. Open the APP",
-"2. Tap “Send Email” button"
-],
-"AR":"App return different links not related to sending email",
-"ER":"App return links related to sending email"
-
-}
-
-
-17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
--> Commit new file (Create bug_report.json)
-
-18. На веб интерфейсе модифицировать файл bug_report.json, добавить баг репорт в формате JSON.
-Github -> Repositories -> JSON -> bug_report.json -> Edit this file -> 
-{
-"Telegram nickname":"@jenya1234567",
-"Bug_id":"111",
+"Telegram_nickname":"@jenya1234567",
+"Bug_id":111,
 "Title":"Send Email button return options not related to sending Email",
 "Severity":"Minor",
 "Priority":"Low",
@@ -132,21 +109,39 @@ Github -> Repositories -> JSON -> bug_report.json -> Edit this file ->
 "AR":"App return different links not related to sending email",
 "ER":"App return links related to sending email"
 
-  
-  "Telegram nickname":"@VladislavDunin",
-"Bug_id":"102",
-"Title":"Widget Icon widget size values, widget height and width set to 0",
+}
+
+17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+-> Commit new file (Create bug_report.json)
+
+18. На веб интерфейсе модифицировать файл bug_report.json, добавить баг репорт в формате JSON.
+Github -> Repositories -> JSON -> bug_report.json -> Edit this file -> 
+{
+"Telegram_nickname":"@jenya1234567",
+"Bug_id":111,
+"Title":"Send Email button return options not related to sending Email",
 "Severity":"Minor",
 "Priority":"Low",
-"Environment":"1)Redmi Note 8 M1908C3JG ; Android 10",
-"Precondition":"Open the App",
-"STR":["1. Click Add widget button",
-
-"2. Hide application",
-"3. Look the widget icon"
+"Environment":"1}Samsung Galaxy S9+, Android 10",
+"Precondition":"Installed app on the device",
+"STR":[
+"1. Open the APP",
+"2. Tap “Send Email” button"
 ],
-"AR":"parameters Height (H) and Width (W) are set to 0",
-"ER":"the parameters Height (H) and Width (W) are in values in relation to the screen resolution settings that the user has set",
+"AR":"App return different links not related to sending email",
+"ER":"App return links related to sending email",
+
+  
+  "Telegram_nickname2":"@VladislavDunin",
+"Bug_id2":102,
+"Title2":"Widget Icon widget size values, widget height and width set to 0",
+"Severity2":"Minor",
+"Priority2":"Low",
+"Environment2":["1)Redmi Note 8 M1908C3JG", "Android 10"],
+"Precondition2":"Open the App",
+"STR2":["1. Click Add widget button", "2. Hide application", "3. Look the widget icon"],
+"AR2":"parameters Height (H) and Width (W) are set to 0",
+"ER2":"the parameters Height (H) and Width (W) are in values in relation to the screen resolution settings that the user has set",
 "Attachments":"https://drive.google.com/file/d/1vQ_dc2Dkg2FlycsTAk9e5Qx1jw9_6N3T/view?usp=sharing"
 
 }
@@ -188,6 +183,7 @@ vim new.xml
                 <age>"30"</age>
                 <pets>"Two cats"</pets>
                 <salary_expectations>"800 USD"</salary_expectations>
+</xml>
 (ESCAPE)
 :wq
 
@@ -208,6 +204,7 @@ vim preferences.xml
         <fav.season>"Autumn"</fav.season>
         <fav.country>"Switheland"</fav.country>
 </preferences>
+</xml>
 (ESCAPE)
 :wq
 
@@ -243,7 +240,7 @@ vim preferences.xml
                 <skill_26>"26. Методология разработки Scrum."</skill_26>
 
         </skills>
-
+</xml>
 (ESCAPE)
 :wq
 
@@ -272,6 +269,7 @@ Name your file (bug_report.xml)
     <AR>"App return different links not related to sending email"</AR>
     <ER>"App return  links related to sending email"</ER>
   </bug_report>
+ </xml>
 
 35. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
 -> Commit new file (Create bug_report.xml)
@@ -279,7 +277,7 @@ Name your file (bug_report.xml)
 
 36. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML.
 Github -> Repositories -> XML -> bug_report.xml -> Edit this file -> 
-<hml>
+<xml>
   <bug_reports>
     <bug_rep1>
     <tg_name>"@jenya1234567"</tg_name>
@@ -304,15 +302,16 @@ Github -> Repositories -> XML -> bug_report.xml -> Edit this file ->
     <Priority>"Low"</Priority>
     <Environment>"1)Redmi Note 8 M1908C3JG; Android 10</Environment>
     <Precondition>"Open the App"</Precondition>
-    <STR_1>
-      <STR1_>"1)Click button Add widget"</STR1>
-      <STR2_>"2)Hide application"</STR2>
-      <STR3_>"3)Look the widget icon"</STR3_>
-    </STR_1>
+    <STR>
+      <STR1>"1)Click button Add widget"</STR1>
+      <STR2>"2)Hide application"</STR2>
+      <STR3>"3)Look the widget icon"</STR3>
+    </STR>
     <AR>"parameters Height(H) and Width(W) are set to 0"</AR>
     <ER>"the parameters Height (H) and "Width (W) are in values in relation to the screen resolution settings that the user has set"</ER>
       </bug_rep2>
       </bug_reports>
+</xml>
 	  
 37. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
 -> Commit changes (added new bug #102)
