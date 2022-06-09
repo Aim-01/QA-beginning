@@ -1,0 +1,86 @@
+GitHub. HW_2
+1. На локальном репозитории сделать ветки для:
+- Postman -> git branch Postman
+- Jmeter -> git branch Jmeter
+- CheckLists -> git branch CheckLists
+- Bag Reports -> git branch Bag_Reports
+- SQL -> git branch SQL
+- Charles -> git branch Charles
+- Mobile testing  -> git branch Mobile_testing
+
+2. Запушить все ветки на внешний репозиторий
+git branch Postman -> $ git commit --allow-empty -m "empty branch is going to GH" ->  git push origin Postman
+git checkout Jmeter -> git commit --allow-empty -m "empty branch Jmeter is going to GH" ->  git push origin Postman
+git checkout CheckLists -> git commit --allow-empty -m "empty branch CheckLists is goinig to GH" -> git push origin CheckLists
+git checkout Bag_Reports ->  git commit --allow-empty -m "empty branch Bag_Reports is going to GH" -> git push origin Bag_Reports
+git checkout SQL ->  git commit --allow-empty -m "empty branch SQL is going to GH" ->  git push origin SQL
+git checkout Charles ->  git commit --allow-empty -m "empty branch Charles is going to GH" ->  git push origin Charles
+git checkout Mobile_testing ->  git commit --allow-empty -m "empty branch Mobile_testing is going to GH" ->  git push origin Mobile_testing
+
+3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
+ git checkout Bug_Reports
+ vim bug1.txt
+ (INSERT)
+ Telegram nickname:@jenya1234567
+      Bug_id: 111
+     Title: Send Email button return options not related to sending Email
+
+      Severity: Minor
+      Priority: Low
+      Environment: 1)Samsung Galaxy S9+,  Android 10
+
+
+      Precondition: Installed app on the device
+      STR:
+         1. Open the APP
+         2. Tap “Send Email” button
+
+
+     AR: App return different links not related to sending email
+     ER: App return  links related to sending email
+
+(ESC)
+:wq
+
+4. Запушить структуру багрепорта на внешний репозиторий
+git status
+ git add bug1.txt
+ git commit -m "sending bug1.txt to GH (branch Bug_Reports)"
+ git push
+
+5. Вмержить ветку Bag Reports в Main
+git checkout main
+ git merge Bug_Reports -m "merging Bug_Reports branch to main branch"
+
+6. Запушить main на внешний репозиторий.
+git status
+git push
+
+7. В ветке CheckLists набросать структуру чек листа.
+ vim ChL.txt
+(INSERT)
+Структура чеклиста содержит:
+ID
+название проверки
+предусловие
+ожидаемый результат
+фактический результат
+дополнительные материалы (скрин, видео, ссылка и пр)
+окружение
+отметка о прохождении
+Чек-лист - документ, содержащий в себе подтверждение корректной и/или некорректной работы проверяемой функциию Содержит в себе критерии, помогающие найти багг    
+(ESC)
+:wq
+
+8. Запушить структуру на внешний репозиторий
+git status
+ git add ChL.txt
+ git commit -m "sending ChL.txt to GH (branch Bug_Reports)"
+ git push
+ 
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+GitHub acc -> Repositories -> Branches_test -> branches -> All banches -> New pull request -> base: main (куда вливать изменения) compare: CheckLists (откуда заливать изменения) -> Pull request -> Continue Pull request
+
+10. Синхронизировать Внешнюю и Локальную ветки Main
+git fetch
+git pull
