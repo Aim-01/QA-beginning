@@ -8,3 +8,4 @@ All homewors are collected there
 6. HW4_Postman1.postman_collection
 7. HW5_1_JS
 8. HW5_1hard_JS
+9. HW5_2_JS
