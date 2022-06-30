@@ -1,0 +1,119 @@
+2я домашка по JS со звездочками:
+
+1. Написать скриптик, который сосчитает и выведет результат от возведения 2 в
+степень 10, начиная со степени 1
+
+for ( let i = 0; i <= 10; i++ ){
+    let res = 2** i
+
+    console.log(res)
+}
+
+1*. Преобразовать 1 задачу в функцию, принимающую на вход степень, в которую
+будет возводиться число 2
+
+
+ chI = function(b){
+    
+for ( let i = 0; i <= b; i++ ){
+    
+    let res = 2** i
+   
+    console.log(res)
+}
+}
+chI(10)
+
+2. Написать скрипт, который выведет 5 строк в консоль таким образом, чтобы в первой
+строчке выводилось :), во второй :):) и так далее
+Пример в консоли:
+:)
+:):)
+:):):)
+:):):):)
+:):):):):)
+
+let stroka = ""
+let content_stroki = ":)"
+
+for (i = 1; i <= 5; i++){
+
+   stroka = stroka+ content_stroki
+   
+    console.log(stroka)
+}
+
+2*. Преобразовать 2 задачу в функцию, принимающую на вход строку, которая и будет
+выводиться в консоль (как в условии смайлик), а также количество строк для вывода
+e.g. function printSmile(stroka, numberOfRows)
+
+let string = ""
+function printSmile(stroka1, numberOfRows) {
+
+for (i = 1; i <= numberOfRows; i++){
+string = string+stroka1
+console.log(string)
+}
+}
+
+printSmile(":]", 6)
+
+3**. Написать функцию, которая принимает на вход слово. Задача функции посчитать
+и вывести в консоль, сколько в слове гласных, и сколько согласных букв.
+e.g. function getWordStructure(word)
+В консоли:
+Слово (word) состоит из (число) гласных и (число) согласных букв
+Проверки: 'case', 'Case', 'Check-list'
+
+function getWordStructure1(word1){
+    let countSog1 = 0
+    let countGla1 = 0
+    
+    let gl1 = "aeiouy"
+    let sogl1 = "bcdfghqjklmnprstvwxz"
+    
+    for (i = 0; i < word1.toLowerCase().split("").length; i++){   // повторяет цикл 4 раза
+           for(j = 0; j < gl1.split("").length; j++){   // повторяем цикл по количеству гласных (12)
+        
+              if( gl1.split("")[j] !== word1.toLowerCase().split("")[i]){  // если нет совпадений с массивом гласных
+              }
+              else {   
+               countGla1 += 1  // если есть совпадение с массивом гласных, прибавляем 1 в счёт гласных
+                    break     // прерываем цикл если было совпадение    
+    } 
+    }
+            for (k =0; k < sogl1.split("").length; k++ ){   // повторяет цикл 40 раз
+                    if(sogl1.split("")[k] !== word1.toLowerCase().split("")[i] ){   // если нет совпадений с массивом согласных
+                    }
+                    else{
+                        countSog1 +=1  // если есть совпадение с массивом согласных, прибавляем 1 в счёт согласных
+                        break    // прерываем цикл если было совпадение  
+                    }
+            }
+    }
+    console.log("Слово " + word1 + " сщстоит из " + countGla1 + " гласных" + " и " + countSog1 + " согласных.")
+    }
+    getWordStructure1("case")
+    getWordStructure1("Case")
+    getWordStructure1("Check-list")
+
+4**. Написать функцию, которая проверяет, является ли слово палиндромом
+e.g. function isPalindrom(word)
+Проверки: 'abba', 'Abba'
+
+function isPalindrom(word2){
+if(
+    word2.toLowerCase().split("").reverse().join("") == word2.toLowerCase() ){   // развернуть reverse массив с конца и склеить join
+        console.log(word2.toLowerCase().split("").reverse())
+    console.log("Word " + word2 +" is palindrome")
+}
+else{
+    console.log("Word " + word2 +" is not palindrome")
+}
+
+}
+isPalindrom("abba")
+isPalindrom("Abba")
+isPalindrom("Randome")
+
+
